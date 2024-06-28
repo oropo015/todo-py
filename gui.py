@@ -28,7 +28,6 @@ while True:
             todos[index] = new_edit
             fc.write_todos(todos)
             window['todos'].update(values=todos)
-            #window['todo'].update(value="")
         case 'todos':
             window['todo'].update(value=values['todos'][0])
         case sg.WIN_CLOSED:
