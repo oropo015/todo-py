@@ -1,6 +1,8 @@
 import zipfile
 import pathlib
 
+var = zipfile.ZIP_DEFLATED
+
 
 def get_todos():
     with open("todo.txt", "r") as file:
@@ -21,7 +23,12 @@ def make_achieve(filepaths_, dest_):
             achieve.write(file, arcname=file.name)
 
 
+def un_achieve(filepath, dest_):
+    with zipfile.ZipFile(filepath, "r") as achieve:
+        achieve.extractall(dest_)
+
+
 if __name__ == '__main__':
-    filepaths=["a.txt", "b.txt", "c.txt"]
+    filepaths = ["a.txt", "b.txt", "c.txt"]
     dest = "dest"
     make_achieve(filepaths, dest)

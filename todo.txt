@@ -1,6 +1,0 @@
-C ++
-C
-C Sharp
-C Sharp
-C Sharp
-Python
