@@ -1,9 +1,5 @@
-Learn C++
-Computer Science
-Fortan
-C 
-D
-Sharp
-
-
+C ++
+C
+Python
+C Sharp
 Python
