@@ -35,6 +35,14 @@ while True:
             window['todos'].update(values=todos)
         case "todos":
             window['todo'].update(value=value['todos'][0])
+        case "Delete":
+            value_to_delete = value['todos'][0]
+            print(value_to_delete)
+            todos = fc.get_todos()
+            #index = todos.index(value_to_edit)
+            todos.remove(value_to_delete)
+            fc.write_todos(todos)
+            window['todos'].update(values=todos)
         case sg.WIN_CLOSED:
             break
 
